@@ -46,7 +46,7 @@ window#waybar {
 
 #workspaces button {
 	transition: none;
-	color:  #fbf1c7;
+	color:  #f9f5d7;
 	background: transparent;
 }
 
@@ -54,11 +54,11 @@ window#waybar {
 	transition: none;
 	box-shadow: inherit;
 	text-shadow: inherit;
-	color: #8f3f71;
+	color: #b16286;
 }
 
 #workspaces button.active{
-  color: #076678;
+  color: #458588;
 }
 #mpd {
 	margin-top: 8px;
@@ -87,7 +87,7 @@ window#waybar {
 	border-radius: 26px;
 	transition: none;
 	background: transparent;
-	color: #fbf1c7;
+	color: #f9f5d7;
 }
 
 #language {
@@ -99,7 +99,7 @@ window#waybar {
 	border-radius: 26px;
 	transition: none;
 	background: transparent;
-	color: #fbf1c7;
+	color: #f9f5d7;
 }
 
 
@@ -112,7 +112,7 @@ window#waybar {
 	border-radius: 26px;
 	transition: none;
 	background: transparent;
-	color: #fbf1c7;
+	color: #f9f5d7;
 }
 
 #clock {
@@ -126,7 +126,7 @@ window#waybar {
 	border-radius: 26px;
 	transition: none;
 	background: transparent;
-  color: #fbf1c7;
+  color: #f9f5d7;
 }
 
 tooltip{
