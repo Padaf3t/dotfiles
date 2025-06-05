@@ -1,0 +1,138 @@
+// -*- mode: jsonc -*-
+[{
+    "name": "waybar#monitorHBar",
+    "output": "DP-2",
+    "reload_style_on_change" : true,
+    "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)
+    "height": 44, // Waybar height (to be removed for auto height)
+    "spacing": 4, // Gaps between modules (4px)
+    // Choose the order of the modules
+    //
+    "modules-left": [
+       "clock",
+    ],
+    "modules-center": [
+        "hyprland/workspaces",
+    ],
+    "modules-right": [
+        "wireplumber",
+        "keyboard-state",
+        "hyprland/language",
+    ],
+     //Modules configuration
+    "hyprland/workspaces": {
+         "disable-scroll": true,
+         "all-outputs": false,
+         "warp-on-scroll": false,
+         "format": "{name}",
+     },
+     "hyprland/language": {
+      	"format": "{short}"
+    	},
+    "keyboard-state": {
+        "numlock": true,
+        "capslock": true,
+        "format": "{name} {icon}",
+        "format-icons": {
+            "locked": "",
+            "unlocked": ""
+        }
+    },
+    "clock": {
+        "format": "{:%a, %d %B %Y}",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+                    "mode"          : "year",
+                    "mode-mon-col"  : 3,
+                    "weeks-pos"     : "right",
+                    "on-scroll"     : 1,
+                    "format": {
+                              "months":     "<span color='#98971a'><b>{}</b></span>",
+                              "days":       "<span color='#3c3836'><b>{}</b></span>",
+                              "weeks":      "<span color='#b16286'><b>W{}</b></span>",
+                              "weekdays":   "<span color='#d79921'><b>{}</b></span>",
+                              "today":      "<span color='#cc241d'><b><u>{}</u></b></span>"
+                              }
+                    },
+        "actions":  {
+                    "on-click-right": "mode",
+                    "on-scroll-up": "tz_up",
+                    "on-scroll-down": "tz_down",
+                    "on-scroll-up": "shift_up",
+                    "on-scroll-down": "shift_down"
+                    }
+    },
+  "wireplumber": {
+    "scroll-step": 1,
+    "format": "{volume}% {icon}",
+    "format-muted": " {format_source}",
+    "format-icons": {
+       "headphone": "",
+       "hands-free": "",
+       "headset": "",
+       "phone": "",
+       "portable": "",
+       "car": "",
+       "default": ["", "", ""]
+   }    
+  },
+},
+{   
+    "output": "DP-3",
+    "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)
+    "height": 44, // Waybar height (to be removed for auto height)
+    "spacing": 4, // Gaps between modules (4px)
+    // Choose the order of the modules
+    "modules-center": [
+        "hyprland/workspaces",
+    ],
+    //Modules configuration
+    "hyprland/workspaces": {
+         "disable-scroll": true,
+         "all-outputs": false,
+         "warp-on-scroll": false,
+         "format": "{name}",
+         "format-icons": {
+	     "urgent": "",
+             "active": "",
+             "default": "",
+         },
+	 "monitor":"DP-3"
+     },
+},
+{   
+    "name": "clockBar",
+    "output": "DP-3",
+    "exclusive":false,
+    
+    "layer": "bottom", // Waybar at top layer
+    "position": "bottom", // Waybar position (top|bottom|left|right)
+    // Choose the order of the modules
+    "modules-center": [
+        "clock",
+    ],
+    //Modules configuration
+    "clock": {
+        "format": "{:%H:%M}",
+        "tooltip" : false,
+        },
+},
+{   
+    "name": "dateBar",
+    "output": "DP-3",
+    "exclusive":false,
+    
+    "layer": "bottom", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)
+    // Choose the order of the modules
+    "modules-center": [
+        "clock",
+    ],
+    //Modules configuration
+    "clock": {
+        "format": "{:%a, %d %B %Y}",
+        "tooltip":false,
+    },
+}]

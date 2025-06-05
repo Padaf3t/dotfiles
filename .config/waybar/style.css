@@ -1,0 +1,151 @@
+/*
+ ********************************************
+ *░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░*
+ *░░█▀█░█░░░█░█░█▀▀░░░█░█░█░░░▀█▀░█▀▄░█▀█░░*
+ *░░█▀▀░█░░░█░█░▀▀█░░░█░█░█░░░░█░░█▀▄░█▀█░░*
+ *░░▀░░░▀▀▀░▀▀▀░▀▀▀░░░▀▀▀░▀▀▀░░▀░░▀░▀░▀░▀░░*
+ *░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░*
+ ********************************************
+ */
+
+* {
+	border: none;
+	border-radius: 0;
+	/*font-family: OpenDyslexicM Nerd Font Mono;*/
+	font-size: 16px;
+	min-height: 24px;
+}
+
+window#waybar {
+	background: transparent;
+}
+
+#window {
+  
+  margin-top: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+	border-radius: 26px;
+	transition: none;
+  color: transparent;
+	background: transparent;
+}
+
+#module-center{
+  background:transparent;
+}
+
+#workspaces {
+	margin-top: 8px;
+	margin-left: 12px;
+	margin-bottom: 0;
+	border-radius: 26px;
+	background: transparent;
+	transition: none;
+}
+
+#workspaces button {
+	transition: none;
+	color:  #fbf1c7;
+	background: transparent;
+}
+
+#workspaces button:hover {
+	transition: none;
+	box-shadow: inherit;
+	text-shadow: inherit;
+	color: #8f3f71;
+}
+
+#workspaces button.active{
+  color: #076678;
+}
+#mpd {
+	margin-top: 8px;
+	margin-left: 8px;
+	padding-left: 16px;
+	padding-right: 16px;
+	margin-bottom: 0;
+	border-radius: 26px;
+	background: #fbf1c7;
+	transition: none;
+	color: #3c3836;
+}
+
+#mpd.disconnected,
+#mpd.stopped {
+	color: #3c3836;
+	background: #fbf1c7;
+}
+
+#keyboard-state {
+	margin-top: 8px;
+	margin-left: 8px;
+	padding-left: 16px;
+	padding-right: 16px;
+	margin-bottom: 0;
+	border-radius: 26px;
+	transition: none;
+	background: transparent;
+	color: #fbf1c7;
+}
+
+#language {
+	margin-top: 8px;
+	margin-left: 8px;
+	padding-left: 16px;
+	padding-right: 16px;
+	margin-bottom: 0;
+	border-radius: 26px;
+	transition: none;
+	background: transparent;
+	color: #fbf1c7;
+}
+
+
+#wireplumber {
+	margin-top: 8px;
+	margin-left: 8px;
+	padding-left: 16px;
+	padding-right: 16px;
+	margin-bottom: 0;
+	border-radius: 26px;
+	transition: none;
+	background: transparent;
+	color: #fbf1c7;
+}
+
+#clock {
+	margin-top: 8px;
+	margin-left: 8px;
+	margin-right: 12px;
+	padding-left: 16px;
+	padding-right: 16px;
+  font-size: 20px;
+	margin-bottom: 0;
+	border-radius: 26px;
+	transition: none;
+	background: transparent;
+  color: #fbf1c7;
+}
+
+tooltip{
+  background : #fbf1c7;
+  border-radius : 30px;
+  color : #3c3836;
+}
+
+.clockBar #clock{
+   margin-bottom : 1205px;
+   font-size: 150px;
+   font-family: OpenDyslexicM Nerd Font Mono;
+   opacity: 1;
+    
+}
+
+.dateBar #clock{
+  margin-top : 100px;
+   font-size: 75px;
+   font-family: OpenDyslexicM Nerd Font Mono;
+   opacity: 1;
+}
