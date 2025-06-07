@@ -164,7 +164,7 @@ alias ltth='eza --color=always --tree --level=2 --icons -a'
 alias lsh='eza --color=always -a -a --group-directories-first --icons --git'
 alias lshf='eza --color=always -a --group-directories-first --icons -f --git --show-symlinks'
 alias lshd='eza -a -a --group-directories-first --icons -D --git --show-symlinks'
-
+alias grep='grep --color=auto'
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
