@@ -46,7 +46,7 @@ window#waybar {
 
 #workspaces button {
 	transition: none;
-	color:  #f9f5d7;
+	color:  #3c3836;
 	background: transparent;
 }
 
@@ -54,28 +54,11 @@ window#waybar {
 	transition: none;
 	box-shadow: inherit;
 	text-shadow: inherit;
-	color: #b16286;
+	color: #427b58;
 }
 
 #workspaces button.active{
-  color: #458588;
-}
-#mpd {
-	margin-top: 8px;
-	margin-left: 8px;
-	padding-left: 16px;
-	padding-right: 16px;
-	margin-bottom: 0;
-	border-radius: 26px;
-	background: #fbf1c7;
-	transition: none;
-	color: #3c3836;
-}
-
-#mpd.disconnected,
-#mpd.stopped {
-	color: #3c3836;
-	background: #fbf1c7;
+  color: #af3a03;
 }
 
 #keyboard-state {
@@ -87,7 +70,7 @@ window#waybar {
 	border-radius: 26px;
 	transition: none;
 	background: transparent;
-	color: #f9f5d7;
+	color: #3c3836;
 }
 
 #language {
@@ -99,7 +82,7 @@ window#waybar {
 	border-radius: 26px;
 	transition: none;
 	background: transparent;
-	color: #f9f5d7;
+	color: #3c3836;
 }
 
 
@@ -112,7 +95,7 @@ window#waybar {
 	border-radius: 26px;
 	transition: none;
 	background: transparent;
-	color: #f9f5d7;
+	color: #3c3836;
 }
 
 #clock {
@@ -126,7 +109,7 @@ window#waybar {
 	border-radius: 26px;
 	transition: none;
 	background: transparent;
-  color: #f9f5d7;
+  color: #3c3836;
 }
 
 tooltip{
@@ -136,15 +119,15 @@ tooltip{
 }
 
 .clockBar #clock{
-   margin-bottom : 1205px;
+   margin-bottom : 1805px;
+   margin-left: -10px;
    font-size: 150px;
    font-family: OpenDyslexicM Nerd Font Mono;
    opacity: 1;
-    
 }
 
 .dateBar #clock{
-  margin-top : 100px;
+  margin-top : 300px;
    font-size: 75px;
    font-family: OpenDyslexicM Nerd Font Mono;
    opacity: 1;

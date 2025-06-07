@@ -1,6 +1,6 @@
 // -*- mode: jsonc -*-
 [{
-    "name": "waybar#monitorHBar",
+    "name": "monitorHBar",
     "output": "DP-2",
     "reload_style_on_change" : true,
     "layer": "top", // Waybar at top layer
