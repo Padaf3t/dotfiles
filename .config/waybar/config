@@ -125,7 +125,7 @@
     "exclusive":false,
     
     "layer": "bottom", // Waybar at top layer
-    "position": "top", // Waybar position (top|bottom|left|right)
+    "position": "bottom", // Waybar position (top|bottom|left|right)
     // Choose the order of the modules
     "modules-center": [
         "clock",
