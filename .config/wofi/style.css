@@ -3,89 +3,98 @@
 @define-color bg1         #ebdbb2;
 @define-color fg0         #282828;
 @define-color fg1         #3c3836;
-@define-color green-light #98971a;
-@define-color red-dark    #9d0006;
-@define-color red-light   #cc241d;
-@define-color yellow-dark #b57614;
-@define-color yellow-light #d79921;
+@define-color orange      #af3a03;
+@define-color green       #79740e;
 @define-color gray        #7c6f64;
 
-/* Window with green border and rounded corners */
 #window {
     background-color: transparent;
 }
 
-/* Outer box container */
 #outer-box {
-    background-color: rgba(152,151,26,0.5);
+    background-color: transparent;
     border-radius: 15px;
     padding: 10px;
 }
 
-/* Input box (search bar) */
 #input {
-    background-color: rgba(235, 219, 178, 0.8);
-    color: @fg0;
+    background-color: @green;
+    color: @bg0;
     border-radius: 6px;
+    border: 2px solid @fg1;
     padding: 6px;
     opacity: 1;
+    margin-bottom: 10px;
 }
 
-/* Scroll area */
+#input:focus image {
+    color: @bg0;
+}
+
+#input:not(:focus) image {
+    color: @fg1;
+}
+
+#input:focus {
+    background-color: @green;
+    border-color: @gray;
+    box-shadow: none;
+}
+
+#input:not(:focus) {
+    background-color: @bg1;
+    border-color: @fg0;
+}
+
 #scroll {
-    background-color: rgba(251, 241, 199, 0.8);
-    border-radius: 6px;
+    background-color: @bg1;
+    border: 2px solid @fg1;
+    border-radius: 10px;
     padding: 5px;
     opacity: 1;
 }
 
-/* Inner box with entries */
 #inner-box {
-    background-color: rgba(251, 241, 199, 0.8);
+    background-color: transparent;
     padding: 5px;
     border-radius: 20px;
 }
 
-/* Text in entries */
-#text {
-    color: @fg1;
-}
-
-/* Entry box (used for selected/unselected states) */
+/* Entry default styling */
 #entry {
     padding: 6px;
     margin: 2px;
     border-radius: 6px;
-}
-
-/* Selected entry */
-#entry:selected {
-    background-color: @yellow-light;
-    color: @fg0;
-}
-
-/* Unselected entry */
-#entry:not(:selected) {
     background-color: @bg0;
     color: @fg1;
 }
 
-/* Image (if using icons/images) */
-#img {
-    margin-right: 8px;
+/* Text inside entry */
+#entry {
+    background-color: @bg0;
+    color: @fg1;
 }
 
-/* Optional: Entry hover effect (if supported by your Wofi/GTK version) */
-#entry:hover {
-    background-color: @bg1;
-    color: @fg0;
+/* Default entry text */
+#entry #text {
+    color: @fg1;
 }
 
-/* Expander (multi-action entries) */
-#expander-box {
-    background-color: @bg1;
-    border-radius: 4px;
-    padding: 4px;
-    margin-top: 4px;
+/* Selected entry */
+#entry:selected {
+    background-color: @orange;
+    color: @bg0;
 }
 
+#entry:selected #text {
+    color: @bg0;
+}
+
+#entry:selected:not(:focus) {
+    background-color: @bg0;
+    color: @fg1;
+}
+
+#entry:selected:not(:focus) #text {
+    color: @fg1;
+}
