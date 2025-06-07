@@ -80,8 +80,60 @@ eval "$(starship init zsh)"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
+############---------LS_COLORS---------#############
+# Base colors
+base_colors=(
+  "di=38;5;172"   # directories       yellow
+  "fi=38;5;243"   # files             gray
+  "ln=38;5;66"    # symlinks          blue
+  "pi=38;5;106"   # pipes             green
+  "so=38;5;72"    # sockets           aqua
+  "bd=38;5;166"   # block devices     orange
+  "cd=38;5;166"   # char devices      orange
+  "or=38;5;166"   # orphaned symlinks orange
+  "ex=38;5;124"   # executables       red
+)
+# Programming languages
+prog_exts=(
+  "*.c" "*.cpp" "*.cc" "*.cxx" "*.hpp" "*.hh" "*.hxx" "*.cs" "*.java" "*.js" "*.jsx" "*.mjs" "*.cjs" \
+  "*.ts" "*.tsx" "*.py" "*.pyw" "*.rb" "*.go" "*.rs" "*.swift" "*.kt" "*.kts" "*.php" "*.phtml" \
+  "*.pl" "*.pm" "*.t" "*.scala" "*.dart" "*.lua" "*.hs" "*.lhs" "*.m" "*.mm" "*.sql" "*.groovy" \
+  "*.coffee" "*.elm" "*.erl" "*.hrl" "*.fs" "*.fsi" "*.fsx" "*.tcl" "*.tk"
+)
+# Scripting languages
+script_exts=(
+  "*.sh" "*.bash" "*.zsh" "*.ksh" "*.fish" "*.bat" "*.cmd" "*.ps1" "*.psm1"
+)
+# Config/markup files
+config_exts=(
+  "*.html" "*.htm" "*.css" "*.md" "*.markdown" "*.json" "*.jsonc" "*.json5" "*.yaml" "*.yml" \
+  "*.xml" "Dockerfile" "Makefile" "makefile"
+)
+# Helper function to join extensions with their color
+join_exts_with_color() {
+  local arr_name=$1
+  local color=$2
+  local result=""
+  local ext
+
+  eval "arr=(\"\${${arr_name}[@]}\")"
+
+  for ext in "${arr[@]}"; do
+    result+="${ext}=38;5;${color}:"
+  done
+  echo "$result"
+}
+# Join base colors into a string (with trailing colon)
+base_colors_str=$(printf "%s:" "${base_colors[@]}")
+# Join all extensions with their respective colors
+prog_colors=$(join_exts_with_color prog_exts 24)
+config_colors=$(join_exts_with_color config_exts 132)
+shell_colors=$(join_exts_with_color script_exts 88)
+# Combine all parts and remove trailing colon
+export LS_COLORS="${base_colors_str}${prog_colors}${config_colors}${shell_colors%:}"
+
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=ca_en.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -100,7 +152,19 @@ eval "$(starship init zsh)"
 # - $ZSH_CUSTOM/aliases.zsh
 # - $ZSH_CUSTOM/macos.zsh
 # For a full list of active aliases, run `alias`.
-#
+
+alias ls='eza --color=always --group-directories-first --icons'
+alias lf='eza --color=always --group-directories-first --icons -f'
+alias ld='eza --color=always --group-directories-first --icons -D'
+alias ll='eza --color=always  -l --git --icons -a'
+alias lt='eza --color=always --tree --level=1 --icons'
+alias lth='eza --color=always --tree --level=1 --icons -a'
+alias ltt='eza --color=always --tree --level=2 --icons'
+alias ltth='eza --color=always --tree --level=2 --icons -a'
+alias lsh='eza --color=always -a -a --group-directories-first --icons --git'
+alias lshf='eza --color=always -a --group-directories-first --icons -f --git --show-symlinks'
+alias lshd='eza -a -a --group-directories-first --icons -D --git --show-symlinks'
+
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
