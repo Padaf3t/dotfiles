@@ -19,12 +19,9 @@ SAVEHIST=2000
 
 eval "$(starship init zsh)"
 
-# User configuration
-
 # export MANPATH="/usr/local/man:$MANPATH"
 
 ############--------L-S_COLORS---------#############
-
 # Base colors
 base_colors=(
   "di=38;5;172"   # directories       yellow
@@ -79,23 +76,8 @@ export LS_COLORS="${base_colors_str}${prog_colors}${config_colors}${shell_colors
 # You may need to manually set your language environment
 export LANG=ca_en.UTF-8
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='nvim'
-# fi
-
 # Compilation flags
 # export ARCHFLAGS="-arch $(uname -m)"
-
-# Set personal aliases, overriding those provided by Oh My Zsh libs,
-# plugins, and themes. Aliases can be placed here, though Oh My Zsh
-# users are encouraged to define aliases within a top-level file in
-# the $ZSH_CUSTOM folder, with .zsh extension. Examples:
-# - $ZSH_CUSTOM/aliases.zsh
-# - $ZSH_CUSTOM/macos.zsh
-# For a full list of active aliases, run `alias`.
 
 if [[ -d "$ZSHPATH/aliases" ]]; then
   for file in "$ZSHPATH/aliases/"*.zsh; do
@@ -103,7 +85,5 @@ if [[ -d "$ZSHPATH/aliases" ]]; then
   done
 fi
 
-alias grep='grep --color=auto'
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
