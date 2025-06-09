@@ -1,4 +1,6 @@
 export ZSHPATH='/home/padaf3t/.config/zsh'
+export EDITOR=nvim  
+export Visual=nvim 
 
 # The following lines were added by compinstall
 zstyle ':completion:*' completer _complete _ignored
@@ -84,6 +86,13 @@ if [[ -d "$ZSHPATH/aliases" ]]; then
     [[ -r "$file" ]] && source "$file"
   done
 fi
+
+if [[ -d "$ZSHPATH/functions" ]]; then
+  for file in "$ZSHPATH/functions/"*.zsh; do
+    [[ -r "$file" ]] && source "$file"
+  done
+fi
+
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
