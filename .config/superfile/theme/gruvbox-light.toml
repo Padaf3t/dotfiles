@@ -1,0 +1,62 @@
+# gruvbox-light
+# Update by(sort by time):
+
+# Code syntax highlight theme (you can go to https://github.com/alecthomas/chroma/blob/master/styles to find one you like)
+code_syntax_highlight = "gruvbox-light"
+
+# ========= Border =========
+file_panel_border = "#282828"
+sidebar_border = "#282828"
+footer_border = "#282828"
+
+# ========= Border Active =========
+file_panel_border_active = "#83a598"
+sidebar_border_active = "#8f3f71"
+footer_border_active = "#b57614"
+modal_border_active = "#af3a03"
+
+# ========= Background (bg) =========
+full_screen_bg = "#fbf1c7"
+file_panel_bg = "#fbf1c7"
+sidebar_bg = "#fbf1c7"
+footer_bg = "#fbf1c7"
+modal_bg = "#fbf1c7"
+
+# ========= Foreground (fg) =========
+full_screen_fg = "#282828"
+file_panel_fg = "#282828"
+sidebar_fg = "#282828"
+footer_fg = "#282828"
+modal_fg = "#282828"
+
+# ========= Special Color =========
+cursor = "#af3a03"
+correct = "#79740e"
+error = "#9d0006"
+hint = "#427b58"
+cancel = "#7c6f64"
+# Gradient color can only have two color!
+gradient_color = ["#427b58", "#9d0006"]
+
+# ========= File Panel Special Items =========
+file_panel_top_directory_icon = "#427b58"
+file_panel_top_path = "#076678"
+file_panel_item_selected_fg = "#8f3f71"
+file_panel_item_selected_bg = "#fbf1c7"
+
+# ========= Sidebar Special Items =========
+sidebar_title = "#CC241D"
+sidebar_item_selected_fg = "#af3a03"
+sidebar_item_selected_bg = "#fbf1c7"
+sidebar_divider = "#282828"
+
+# ========= Modal Special Items =========
+modal_cancel_fg = "#3c3836"
+modal_cancel_bg = "#ebdbb2"
+
+modal_confirm_fg = "#3c3836"
+modal_confirm_bg = "#ebdbb2"
+
+# ========= Help Menu =========
+help_menu_hotkey = "#427b58"
+help_menu_title = "#af3a03"
