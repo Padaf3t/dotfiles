@@ -76,7 +76,7 @@ shell_colors=$(join_exts_with_color script_exts 88)
 export LS_COLORS="${base_colors_str}${prog_colors}${config_colors}${shell_colors%:}"
 
 # You may need to manually set your language environment
-export LANG=ca_en.UTF-8
+export LANG=en_CA.UTF-8
 
 # Compilation flags
 # export ARCHFLAGS="-arch $(uname -m)"

@@ -42,6 +42,7 @@
     "clock": {
         "format": "{:%a, %d %B %Y}",
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "locale" : "en_CA.utf8",
         "calendar": {
                     "mode"          : "year",
                     "mode-mon-col"  : 3,
@@ -117,6 +118,7 @@
     "clock": {
         "format": "{:%H:%M}",
         "tooltip" : false,
+        "locale" : "en_CA.utf8"
         },
 },
 {   
@@ -134,5 +136,6 @@
     "clock": {
         "format": "{:%a, %d %B %Y}",
         "tooltip":false,
+        "locale" : "en_CA.utf8"
     },
 }]

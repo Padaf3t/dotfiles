@@ -31,17 +31,18 @@
     # dynamic height from 0 to 300
     height = (0, 300)
     # constant height of 300
-    # height = 300
+    #height = 300
     # NOTE: Dunst from version 1.11 and older don't support dynamic height
     #       and the given value is treated as the maximum height
 
     # Position the notification in the top right corner
-    origin = top-right
+    origin = top-center
 
     # Offset from the origin
     # NOTE: Dunst from version 1.11 and older use this alternative notation
     # offset = 10x50
-    offset = (10, 50)
+    offset = (-10, -40)
+
 
     # Scale factor. It is auto-detected if value is 0.
     scale = 0
@@ -111,7 +112,7 @@
     frame_width = 3
 
     # Defines color of the frame around the notification window.
-    frame_color = "#aaaaaa"
+    frame_color = "#af3a03"
 
     # Size of gap to display between notifications - requires a compositor.
     # If value is greater than 0, separator_height will be ignored and a border
@@ -144,7 +145,7 @@
 
     ### Text ###
 
-    font = Monospace 8
+    font = "Jetbrains Mono NL" 16
 
     # The spacing between lines.  If the height is smaller than the
     # font height, it will get raised to the font height.
@@ -188,7 +189,7 @@
 
     # Alignment of message text.
     # Possible values are "left", "center" and "right".
-    alignment = left
+    alignment = center
 
     # Vertical alignment of message text and icon.
     # Possible values are "top", "center" and "bottom".
@@ -271,7 +272,7 @@
     # corners.
     # The radius will be automatically lowered if it exceeds half of the
     # notification height to avoid clipping text and/or icons.
-    corner_radius = 0
+    corner_radius = 6
 
     # Define which corners to round when drawing the window. If the corner radius
     # is set to 0 this option will be ignored.
@@ -341,24 +342,26 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#222222"
-    foreground = "#888888"
+    background = "#3c3836"
+    foreground = "#fbf1c7"
+    frame_color = "#af3a03"
     timeout = 10
     # Icon for notifications with low urgency
     default_icon = dialog-information
 
 [urgency_normal]
-    background = "#285577"
-    foreground = "#ffffff"
+    background = "#fbf1c7"
+    foreground = "#3c3836"
+    frame_color = "#af3a03"
     timeout = 10
     override_pause_level = 30
     # Icon for notifications with normal urgency
     default_icon = dialog-information
 
 [urgency_critical]
-    background = "#900000"
-    foreground = "#ffffff"
-    frame_color = "#ff0000"
+    background = "#9d0006"
+    foreground = "#fbf1c7"
+    frame_color = "#cc241d"
     timeout = 0
     override_pause_level = 60
     # Icon for notifications with critical urgency
@@ -443,6 +446,11 @@
 #[fullscreen_show_critical]
 #    msg_urgency = critical
 #    fullscreen = show
+
+[tidal-low-urgency]
+    appname = "*tidal*"
+    summary = "*"
+    urgency = low
 
 #[espeak]
 #    summary = "*"
