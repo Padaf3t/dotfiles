@@ -1,0 +1,74 @@
+# Precedence
+rule.precedence.color = deleted,completed,active,keyword.,tag.,project.,overdue,scheduled,due.today,due,blocked,blocking,recurring,tagged,uda.
+
+# General UI
+color.label              = color4
+color.label.sort         = color4
+color.alternate          = on color7                # white bg
+color.header             = color2                   # green
+color.footnote           = color2
+color.warning            = color15 on color3        # gray on yellow
+color.error              = color7 on color1         # white on red
+color.debug              = color7 on color5         # white on purple
+
+# Task state
+color.completed          = color8                   # black text
+color.deleted            = color7 on color9         # white on dark red
+color.active             = color8 on color2        # black on olive
+color.recurring          = color8 on color6         # black on aqua
+color.scheduled          = color8 on color2         # black on green
+color.until              = color8 on color4         # black on blue
+color.blocked            = color8 on color0         # black on light gray
+color.blocking           = color7 on color15         # white on dark gray
+
+# Project
+color.project.none       = color0                   # muted gray
+
+# Priority
+color.uda.priority.H     = color7 on color9         # white on red
+color.uda.priority.M     = color7 on color11        # white on orange
+color.uda.priority.L     = color8 on color6        # black on forest green
+
+# Tags
+color.tag.next           = color4
+color.tag.none           = color7
+color.tagged             = color8 on color5         # black on purple
+
+# Due
+color.due                = color7 on color11          # white on yellow
+color.due.today          = color7 on color9          # white on red
+color.overdue            = color7 on color13          # white on purple
+
+# Report: burndown
+color.burndown.done      = color8 on color6          # black on aqua
+color.burndown.pending   = color8 on color1          # black on red
+color.burndown.started   = color8 on color3          # black on yellow
+
+# Report: history
+color.history.add        = color8 on color1          # black on red
+color.history.delete     = color8 on color3          # black on yellow
+color.history.done       = color8 on color6          # black on aqua
+
+# Report: summary
+color.summary.background = on color7                 # white bg
+color.summary.bar        = color8 on color6          # black on aqua
+
+# Command: calendar
+color.calendar.due         = color7 on color9        # white on dark red
+color.calendar.due.today   = color7 on color9        # white on bright red
+color.calendar.holiday     = color7 on color11        # white on yellow
+color.calendar.overdue     = color7 on color13        # white on purple
+color.calendar.scheduled   = color8 on color2        # black on green
+color.calendar.today       = color8 on color4        # black on blue
+color.calendar.weekend     = color8 on color6        # black on aqua
+color.calendar.weeknumber  = color14                 # forest green (foreground only)
+
+# Command: sync
+color.sync.added           = color8 on color2       # black on olive
+color.sync.changed         = color7 on color9        # white on dark red
+color.sync.rejected        = color7 on color13       # white on magenta
+
+# Command: undo
+color.undo.after           = color8 on color2        # black on green
+color.undo.before          = color7 on color9        # white on red
+
