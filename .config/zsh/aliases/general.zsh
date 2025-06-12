@@ -16,3 +16,4 @@ alias cp='cp -i'
 alias mv='mv -i'
 alias ln='ln -i'
 
+alias task='taskwarrior-tui'
