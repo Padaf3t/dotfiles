@@ -1,4 +1,5 @@
 export ZSHPATH='/home/padaf3t/.config/zsh'
+export TASKRC="$HOME/.config/task/.taskrc"
 export EDITOR=nvim  
 export Visual=nvim 
 

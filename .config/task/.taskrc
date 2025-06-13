@@ -1,0 +1,21 @@
+# [Created by task 3.4.1 6/12/2025 10:59:00]
+#data.location=/home/padaf3t/.task
+news.version=3.4.1
+
+# To use the default location of the XDG directories,
+# move this configuration file from ~/.taskrc to ~/.config/task/taskrc and update location config as follows:
+
+data.location=~/.local/share/task
+hooks.location=~/.config/task/hooks
+
+
+### Custom report ###
+#due_soon
+report.due_soon_today.description=Tasks that are due within the next 7 days and are ready
+report.due_soon_today.columns=id,description,project,due,tags
+report.due_soon_today.filter=due.before:7days +READY
+#report.due_soon_today.sort=project,due
+
+
+### Color theme ###
+include ~/.config/task/themes/gruvbox-light-256.theme

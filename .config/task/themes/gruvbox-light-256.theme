@@ -41,7 +41,7 @@ color.recurring           = color8
 color.scheduled           = color8
 
 # Calendar
-color.calendar.due        = color7 on color9
+color.calendar.due        = color7 on color12
 color.calendar.due.today  = color7 on color9
 color.calendar.holiday    = color7 on color11
 color.calendar.overdue    = color7 on color13
