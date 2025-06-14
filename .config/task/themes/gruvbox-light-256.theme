@@ -21,7 +21,7 @@
 
 
 # Precedence
-rule.precedence.color = deleted,completed,active,overdue,due.today,tag.next,due,scheduled,keyword.,tag.,project.,blocked,blocking,recurring,uda.,tagged
+rule.precedence.color = deleted,completed,active,overdue,tag.next,due.today,due,scheduled,keyword.,tag.,project.,blocked,blocking,recurring,uda.,tagged 
 
 # General UI
 color.alternate           = on color7

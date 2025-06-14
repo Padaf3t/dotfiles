@@ -1,9 +1,14 @@
 #!/bin/bash
 
 # Taskwarrior commands to run
-echo "Tags up"
-task tags
-
+echo "Tags:"
+echo ""
+echo "scheduled, recurring, next, today"
+echo "urgent, high, med, low, vlow"
+echo "phone, email, message"
+echo "idea, thought"
+echo "me, gf, fam, friends"
+echo ""
 echo "--------------------------------------"
 
 echo "Calendar"
