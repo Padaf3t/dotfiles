@@ -18,7 +18,7 @@ report.due_soon_today.sort=project,due
 
 #scheduled
 report.scheduled.description=Tasks that are scheduled in the next week
-report.scheduled.columns=id,description,scheduled,tag
+report.scheduled.columns=id,description,scheduled,tags
 report.scheduled.filter=due.before:7days +scheduled
 report.scheduled.sort=scheduled+
 
