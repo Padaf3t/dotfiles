@@ -3,7 +3,7 @@
 # Taskwarrior commands to run
 echo "Tags:"
 echo ""
-echo "scheduled, recurring, next, today"
+echo "event, recurring, next, today, inprogress"
 echo "urgent, high, med, low, vlow"
 echo "phone, email, message"
 echo "idea, thought"
@@ -16,22 +16,17 @@ task calendar
 
 echo "--------------------------------------"
 
-echo "Project summary"
-task summary
-
-echo "--------------------------------------"
-
-echo "Event in the next week"
-task scheduled
+echo "Event in the next 4 weeks"
+task event
 
 echo "--------------------------------------"
 
 echo "Task due in the next week"
-task due_soon_today
+task due_week
 
 echo "--------------------------------------"
 
 echo "Today's planning"
-task +TODAY
+task today
 
 echo "--------------------------------------"

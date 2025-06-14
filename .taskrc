@@ -10,18 +10,65 @@ hooks.location=~/.config/task/hooks
 
 
 ### Custom report ###
+#today
+report.next.columns=id,project,priority,due,start.active,entry.age,urgency,description.desc,tags
+report.next.labels=ID,Proj,Pri,Due,A,Age,Urg,Description,Tags
+
+report.ready.columns=id,project,priority,due,start.active,entry.age,urgency,description,tags
+report.ready.labels=ID,Proj,Pri,Due,A,Age,Urg,Description,Tags
+
+report.triage.description=Personal - To-Do
+report.triage.columns=id,priority,start.active,urgency,due,description.desc,tags
+report.triage.labels=ID,Pri,A,Urg,Due,Description,Tags
+report.triage.filter=( proj: or proj:personal ) ( due.before:tomorrow or due: ) status:pending -WAITING -idea
+report.triage.sort=urgency-
+
+report.today.description=Tasks for Today
+report.today.columns=id,project,priority,start.active,urgency,due,description.desc,tags
+report.today.labels=ID,Proj,Pri,A,Urg,Due,Description,Tags
+report.today.filter=status:pending -BLOCKED -review and ( ( ( ( prio:H and due: ) or due.before:tomorrow or +respond or +TODAY or +next or +inprogress or +yesterday) ) or +daytime )
+report.today.sort=urgency-
+
+report.active.description=Active Tasks
+report.active.columns=id,description.desc,tags
+report.active.labels=ID,Description,Tags
+report.active.filter=status:pending +ACTIVE
+report.active.sort=urgency-
+
 #due_soon
-report.due_soon_today.description=Tasks that are due within the next week and are ready
-report.due_soon_today.columns=id,description,project,due,scheduled,tags
-report.due_soon_today.filter=due.before:7days +READY
-report.due_soon_today.sort=project,due
+report.due_week.description=Tasks that are due within the next week and are ready
+report.due_week.columns=id,project,urgency,due,scheduled,description,tags
+report.due_week.filter=due.before:7days +READY
+report.due_week.sort=due,urgency
 
-#scheduled
-report.scheduled.description=Tasks that are scheduled in the next week
-report.scheduled.columns=id,description,scheduled,tags
-report.scheduled.filter=due.before:7days +scheduled
-report.scheduled.sort=scheduled+
+#event
+report.event.description=Tasks that are scheduled in the next 4 weeks
+report.event.columns=id,description,scheduled
+report.event.filter=scheduled.after:today and scheduled.before:28days and +event
+report.event.sort=scheduled+
 
+
+priority.default=M
+
+urgency.blocking.coefficient=0
+urgency.annotations.coefficient=0
+urgency.user.tag.respond.coefficient=10
+urgency.user.tag.review.coefficient=-5
+urgency.user.tag.inprogress.coefficient=2.5
+urgency.user.tag.today.coefficient=2
+urgency.user.tag.yesterday.coefficient=3
+urgency.user.tag.plane.coefficient=-2
+
+# relative priority adjustments
+urgency.tags.coefficient=0
+
+# recurring tasks' due dates aren't that important (especially before they're due)
+urgency.due.coefficient=0.5
+
+# turn off confirmations
+confirmation = no
+bulk = 5
+recurrence.confirmation = no
 
 ### Color theme ###
 include ~/.config/task/themes/gruvbox-light-256.theme
