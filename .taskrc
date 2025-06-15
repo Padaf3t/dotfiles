@@ -8,6 +8,7 @@ news.version=3.4.1
 data.location=~/.local/share/task
 hooks.location=~/.config/task/hooks
 
+uda.priority.values=H,M,,L
 
 ### Custom report ###
 #today
@@ -26,7 +27,7 @@ report.triage.sort=urgency-
 report.today.description=Tasks for Today
 report.today.columns=id,project,priority,start.active,urgency,due,description.desc,tags
 report.today.labels=ID,Proj,Pri,A,Urg,Due,Description,Tags
-report.today.filter=status:pending -BLOCKED -review and ( ( ( ( prio:H and due: ) or due.before:tomorrow or +respond or +TODAY or +next or +inprogress or +yesterday) ) or +daytime )
+report.today.filter=status:pending and ( ( ( prio:H and due: ) or due.before:tomorrow  or +TODAY or +next or +inprogress or +urgent or +high) )
 report.today.sort=urgency-
 
 report.active.description=Active Tasks
@@ -38,7 +39,7 @@ report.active.sort=urgency-
 #due_soon
 report.due_week.description=Tasks that are due within the next week and are ready
 report.due_week.columns=id,project,priority,urgency,due,scheduled,description,tags
-report.due_week.labels=ID,Proj,Pri,Urg,Due,Sche,Description,Tags
+report.due_week.labels=ID,Proj,Pri,Urg,Due,Scheduled,Description,Tags
 report.due_week.filter=due.before:7days +READY
 report.due_week.sort=due,urgency
 
@@ -57,7 +58,7 @@ urgency.user.tag.high.coefficient=4
 urgency.user.tag.med.coefficient=1
 urgency.user.tag.low.coefficient=-1
 urgency.user.tag.vlow.coefficient=-3
-urgency.uda.priority.L.coefficient=-1
+urgency.uda.priority.L.coefficient=-2
 
 # relative priority adjustments
 urgency.tags.coefficient=0
@@ -74,3 +75,4 @@ recurrence.confirmation = no
 
 ### Color theme ###
 include ~/.config/task/themes/gruvbox-light-256.theme
+
