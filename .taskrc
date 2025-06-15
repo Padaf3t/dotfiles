@@ -37,7 +37,8 @@ report.active.sort=urgency-
 
 #due_soon
 report.due_week.description=Tasks that are due within the next week and are ready
-report.due_week.columns=id,project,urgency,due,scheduled,description,tags
+report.due_week.columns=id,project,priority,urgency,due,scheduled,description,tags
+report.due_week.labels=ID,Proj,Pri,Urg,Due,Sche,Description,Tags
 report.due_week.filter=due.before:7days +READY
 report.due_week.sort=due,urgency
 
@@ -47,23 +48,24 @@ report.event.columns=id,description,scheduled
 report.event.filter=scheduled.after:today and scheduled.before:28days and +event
 report.event.sort=scheduled+
 
-
-priority.default=M
-
-urgency.blocking.coefficient=0
-urgency.annotations.coefficient=0
-urgency.user.tag.respond.coefficient=10
-urgency.user.tag.review.coefficient=-5
+urgency.user.project.Event.coefficient=-1
 urgency.user.tag.inprogress.coefficient=2.5
 urgency.user.tag.today.coefficient=2
 urgency.user.tag.yesterday.coefficient=3
-urgency.user.tag.plane.coefficient=-2
+urgency.user.tag.urgent.coefficient=7
+urgency.user.tag.high.coefficient=4
+urgency.user.tag.med.coefficient=1
+urgency.user.tag.low.coefficient=-1
+urgency.user.tag.vlow.coefficient=-3
+urgency.uda.priority.L.coefficient=-1
 
 # relative priority adjustments
 urgency.tags.coefficient=0
+urgency.annotations.coefficient=0
 
 # recurring tasks' due dates aren't that important (especially before they're due)
 urgency.due.coefficient=0.5
+urgency.overdue.coefficient=10
 
 # turn off confirmations
 confirmation = no
