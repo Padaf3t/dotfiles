@@ -8,6 +8,12 @@ news.version=3.4.1
 data.location=~/.local/share/task
 hooks.location=~/.config/task/hooks
 
+### Holidays ###
+calendar.holidays=full
+include ~/.config/task/holiday.en-CA
+include ~/.config/task/holiday.autres
+
+
 uda.priority.values=H,M,,L
 
 ### Custom report ###
@@ -41,12 +47,12 @@ report.due_week.description=Tasks that are due within the next week and are read
 report.due_week.columns=id,project,priority,urgency,due,scheduled,description,tags
 report.due_week.labels=ID,Proj,Pri,Urg,Due,Scheduled,Description,Tags
 report.due_week.filter=due.before:7days +READY
-report.due_week.sort=due,urgency
+report.due_week.sort=urgency-,due-
 
 #event
 report.event.description=Tasks that are scheduled in the next 4 weeks
 report.event.columns=id,description,scheduled
-report.event.filter=scheduled.after:today and scheduled.before:28days and +event
+report.event.filter=scheduled.after:today and scheduled.before:28days and +event and status:pending
 report.event.sort=scheduled+
 
 urgency.user.project.Event.coefficient=-1
@@ -64,7 +70,7 @@ urgency.uda.priority.L.coefficient=-2
 urgency.tags.coefficient=0
 urgency.annotations.coefficient=0
 
-# recurring tasks' due dates aren't that important (especially before they're due)
+# recurring tasks' due dates aren't that important (n)
 urgency.due.coefficient=0.5
 urgency.overdue.coefficient=10
 

@@ -1,0 +1,48 @@
+holiday.new_year.name=Jour de l'An
+holiday.new_year.date=20250101
+
+holiday.valentines_day.name=Saint-Valentin
+holiday.valentines_day.date=20250214
+
+holiday.good_friday.name=Vendredi saint
+holiday.good_friday.date=20250418
+
+holiday.easter.name=Pâques
+holiday.easter.date=20250420
+
+holiday.easter_monday.name=Lundi de Pâques
+holiday.easter_monday.date=20250421
+
+holiday.mothers_day.name=Fête des Mères
+holiday.mothers_day.date=20250511
+
+holiday.patriots_day.name=Journée nationale des Patriotes
+holiday.patriots_day.date=20250519
+
+holiday.fathers_day.name=Fête des Pères
+holiday.fathers_day.date=20250615
+
+holiday.saint_jean.name=Fête nationale du Québec (Saint-Jean-Baptiste)
+holiday.saint_jean.date=20250624
+
+holiday.canada_day.name=Fête du Canada
+holiday.canada_day.date=20250701
+
+holiday.labour_day.name=Fête du Travail
+holiday.labour_day.date=20250901
+
+holiday.thanksgiving.name=Action de grâce
+holiday.thanksgiving.date=20251013
+
+holiday.halloween.name=Halloween
+holiday.halloween.date=20251031
+
+holiday.remembrance_day.name=Jour du Souvenir
+holiday.remembrance_day.date=20251111
+
+holiday.christmas.name=Noël
+holiday.christmas.date=20251225
+
+holiday.boxing_day.name=Lendemain de Noël
+holiday.boxing_day.date=20251226
+
